@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flq-9s-NNX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--카드 혜택 추천-->
+        <scene sceneID="vqK-vd-EiE">
+            <objects>
+                <tableViewController id="hbs-nA-Me0" customClass="CardListViewController" customModule="CreditCardRecommandApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="z6h-bY-DT4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kAI-vd-m8I" customClass="CardListCell" customModule="CreditCardRecommandApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kAI-vd-m8I" id="bNn-Ze-Qel">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="CardListCell"/>
+                                <connections>
+                                    <segue destination="rTU-0q-uXB" kind="show" trigger="accessoryAction" id="sHS-h2-oXQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hbs-nA-Me0" id="L5q-BS-9jP"/>
+                            <outlet property="delegate" destination="hbs-nA-Me0" id="bdw-io-jJG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="카드 혜택 추천" id="5MC-cg-0GY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMM-og-FJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="104"/>
+        </scene>
+        <!--카드 혜택 상세-->
+        <scene sceneID="GVS-wW-o91">
+            <objects>
+                <viewController storyboardIdentifier="CardDetailViewController" id="rTU-0q-uXB" customClass="CardDetailViewController" customModule="CreditCardRecommandApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OeG-iV-XpG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qom-EP-0eA">
+                                <rect key="frame" x="20" y="230.5" width="374" height="489.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신용카드 쓰면 0만원 드려요" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYX-NB-rN8">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I43-6s-NE2" customClass="AnimationSubview" customModule="Lottie">
+                                        <rect key="frame" x="0.0" y="87" width="374" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Uiy-cc-KoX"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oKP-se-TXJ">
+                                        <rect key="frame" x="0.0" y="307" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="참여 기간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="md4-ap-e6r">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.1.1(월~1.31(화)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29B-QW-siZ">
+                                                <rect key="frame" x="93" y="0.0" width="281" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UcP-e9-Esj">
+                                        <rect key="frame" x="0.0" y="347.5" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="참여 조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajo-2N-h30">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조건 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cp-U6-5Qo">
+                                                <rect key="frame" x="93" y="0.0" width="281" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-Fj-ioz">
+                                        <rect key="frame" x="0.0" y="388" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="혜택 조건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcn-E5-8R6">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조건 없음" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIE-Fj-ObM">
+                                                <rect key="frame" x="93" y="0.0" width="281" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rj3-pZ-JN5">
+                                        <rect key="frame" x="0.0" y="428.5" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="받는 혜택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnB-wN-DlL">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="혜택 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFx-eR-Plx">
+                                                <rect key="frame" x="93" y="0.0" width="281" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rIZ-9Y-3ai">
+                                        <rect key="frame" x="0.0" y="469" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="받는 날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdS-sL-PkZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.1.1(월)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqM-Gm-Mn5">
+                                                <rect key="frame" x="93" y="0.0" width="281" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fsh-Yd-xqU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qom-EP-0eA" firstAttribute="centerX" secondItem="Fsh-Yd-xqU" secondAttribute="centerX" id="46W-hI-Qf5"/>
+                            <constraint firstItem="XYX-NB-rN8" firstAttribute="centerX" secondItem="Fsh-Yd-xqU" secondAttribute="centerX" id="7FG-J3-jvg"/>
+                            <constraint firstItem="qom-EP-0eA" firstAttribute="centerY" secondItem="Fsh-Yd-xqU" secondAttribute="centerY" id="lWS-7S-FRw"/>
+                            <constraint firstItem="Fsh-Yd-xqU" firstAttribute="trailing" secondItem="qom-EP-0eA" secondAttribute="trailing" constant="20" id="ofA-t9-dfC"/>
+                            <constraint firstItem="qom-EP-0eA" firstAttribute="leading" secondItem="Fsh-Yd-xqU" secondAttribute="leading" constant="20" id="zEB-7k-XwT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="카드 혜택 상세" id="yce-Ef-zgW"/>
+                    <connections>
+                        <outlet property="benefitConditionLabel" destination="vIE-Fj-ObM" id="ut1-an-4pa"/>
+                        <outlet property="benefitDateLabel" destination="FqM-Gm-Mn5" id="QEg-fQ-qlr"/>
+                        <outlet property="benefitDetailLabel" destination="TFx-eR-Plx" id="XgK-cq-prM"/>
+                        <outlet property="conditionLabel" destination="5cp-U6-5Qo" id="ilY-rv-5be"/>
+                        <outlet property="lottieView" destination="I43-6s-NE2" id="ibw-Uk-nbC"/>
+                        <outlet property="periodLabel" destination="29B-QW-siZ" id="4mw-nd-Qhi"/>
+                        <outlet property="titleLabel" destination="XYX-NB-rN8" id="Ioi-U9-OL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esY-hR-Dix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1499" y="104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J3h-sJ-0Eq">
+            <objects>
+                <navigationController id="flq-9s-NNX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="myq-T8-BGo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hbs-nA-Me0" kind="relationship" relationship="rootViewController" id="5xT-e4-YQP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nK-t0-XP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
